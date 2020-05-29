@@ -5,7 +5,7 @@ This is the default web application built on top of the AutoMobleService platfor
 
 ## Online Demo
 
-<a target="_blank" href="https://13.228.158.202/?tenantIdentifier=automobile#/home ">Access the online demo version here</a>
+<a target="_blank" href=<"https://13.228.158.202/?tenantIdentifier=automobile#/home">Access the online demo version here</a>
 
 ## Building from source
 
@@ -55,8 +55,6 @@ This is the default web application built on top of the AutoMobleService platfor
 
    ```
 
-1. Default username/password: mifos/password. This application will hit the demo server by default.
-
 You are done.
 
 ### Connecting to a MifosX Platform using OAuth 2 authentication:
@@ -65,7 +63,7 @@ Edit the value of property "security" in <a href="https://github.com/openMF/comm
 
 ### Connecting to a MifosX Platform running on a different host:
 
-By default, when the app is running from the local filesystem, it will connect to the platform (fineract-provider REST API) deployed on demo.openmf.org.
+By default, when the app is running from the local filesystem, it will connect to the platform (AutomobileServices REST API).
 
 The app connects to the platform running on the same host/port when deployed on a server.
 
@@ -115,20 +113,6 @@ Start a static server and open the project in the default browser. The applicati
 ```
 grunt serve
 ```
-
-### Docker
-To build a Docker image for the current repo, run:
-```
-docker build -t mifos-community-app .
-```
-You can then run a Docker Container from the image above like this:
-```
-docker run --name mifos-ui -it -d -p 80:80 mifos-community-app
-```
-
-Access the webapp on http://localhost in your browser.
-The Dockerfile uses a ruby and node base image to build the current repo and deploys the app on nginx which is exposed
-on port 80 within the container.
 
 ### Compile sass to css
 
